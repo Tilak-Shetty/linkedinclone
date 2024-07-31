@@ -1,0 +1,108 @@
+@import '../../styles/Mixins.scss';
+@import '../../styles/Breakpoints.scss';
+@import '../../styles/Colors.scss';
+
+.search {
+  display: flex;
+  flex-direction: column;
+  height: 22px;
+  color: $gray;
+
+  &:hover {
+    color: $linkedinBlue;
+  }
+
+  @media only screen and (min-width: $small) {
+    padding: 10px;
+  }
+
+  &--hidden {
+    margin-left: 0;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: $linkedinLightBlue;
+
+    @media only screen and (min-width: $mobile) {
+      margin-left: 10px;
+    }
+
+    &--dark {
+      background-color: $darkModeLightGray;
+    }
+  }
+
+  @media only screen and (min-width: $medium) {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: $linkedinLightBlue;
+    margin-left: 0;
+
+    &--dark {
+      background-color: $darkModeLightGray;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    &--hidden {
+      cursor: default;
+    }
+
+    @media only screen and (min-width: $medium) {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__input {
+    display: none;
+    width: 215px;
+
+    @media only screen and (min-width: $small) {
+      width: 278px;
+    }
+
+    @media only screen and (min-width: $mobile) {
+      width: 360px;
+    }
+
+    &--hidden {
+      display: block;
+      outline: none;
+      border: none;
+      background: none;
+      color: $black;
+    }
+
+    @media only screen and (min-width: $medium) {
+      display: block;
+      outline: none;
+      border: none;
+      background: none;
+      color: $black;
+    }
+  }
+
+  &__hints {
+    display: none;
+
+    &--hidden {
+      display: block;
+      padding: 0;
+      margin: 3px 0;
+      width: 100%;
+    }
+
+    @media only screen and (min-width: $medium) {
+      display: block;
+      padding: 0;
+      margin: 3px 0;
+      width: 100%;
+    }
+  }
+}
